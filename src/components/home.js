@@ -56,7 +56,7 @@ const Home = () => {
 
       const [searchText, setSearchText] = useState("");
 
-      const keyApi = "abe24db802cc40b6ac8747694aa584eb";
+      const keyApi = `${process.env.AZURE_KEY}`;
       const [dataText, setDataText] = useState([]);
       const [dataImages, setDataImages] = useState([]);
       const [dataVideos, setDataVideos] = useState([]);
