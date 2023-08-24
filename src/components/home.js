@@ -6,9 +6,9 @@ import axios from "axios";
 function LoadingIcon() {
     return (
 <div className="flex items-center justify-center space-x-2 animate-pulse">
-    <div class="w-3 h-3 sm:w-4 sm:h-4 bg-blue-400 rounded-full"></div>
-    <div class="w-3 h-3 sm:w-4 sm:h-4  bg-blue-400 rounded-full"></div>
-    <div class="w-3 h-3 sm:w-4 sm:h-4  bg-blue-400 rounded-full"></div>
+    <div className="w-3 h-3 sm:w-4 sm:h-4 bg-blue-400 rounded-full"></div>
+    <div className="w-3 h-3 sm:w-4 sm:h-4  bg-blue-400 rounded-full"></div>
+    <div className="w-3 h-3 sm:w-4 sm:h-4  bg-blue-400 rounded-full"></div>
 </div>
     );
   }
@@ -27,7 +27,7 @@ const Home = () => {
           data: payload,
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer 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"
+            Authorization: `Bearer ${process.env.OPENAI_KEY}`
           }
         })
           .then((res) => {
